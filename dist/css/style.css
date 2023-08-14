@@ -530,25 +530,20 @@ h2 {
   align-items: center;
   justify-content: start;
   color: var(--color-main);
-  transition: all 0.3s ease 0s;
 }
 @media (min-width: 767.98px) {
   .arrow-link {
     font-size: 1.8rem;
   }
 }
+@media (min-width: 1279.98px) {
+  .arrow-link {
+    transition: all 0.3s ease 0s;
+  }
+}
 .arrow-link::after {
   content: "\e90c";
-  transition: all 0.3s ease 0s;
   font-size: 8.4px;
-}
-@media (hover: hover) {
-  .arrow-link:hover {
-    color: var(--color-accent);
-  }
-  .arrow-link:hover::after {
-    color: var(--color-accent);
-  }
 }
 
 .quote {
@@ -1043,6 +1038,11 @@ h2 {
   padding: 94px 8px 24px;
   overflow-y: scroll;
 }
+@media (min-width: 767.98px) {
+  .mob-menu__body {
+    padding: 124px 30px 24px;
+  }
+}
 .menu-open .mob-menu__body {
   transform: translateX(0);
 }
@@ -1117,7 +1117,7 @@ h2 {
 .menu-item-has-children > .menu-link::after {
   content: "\e900";
   display: block;
-  font-size: 20px;
+  font-size: 14px;
   transition: all 0.3s ease 0s;
 }
 @media (hover: hover) {
@@ -2933,6 +2933,12 @@ h2 {
   }
   .item-program:hover .item-program__image {
     transform: scale(1.1) translateY(-10px);
+  }
+  .item-program:hover .item-program__link {
+    color: var(--color-accent);
+  }
+  .item-program:hover .item-program__link::before {
+    color: var(--color-accent);
   }
 }
 @media (min-width: 1530px) and (hover: hover) {
