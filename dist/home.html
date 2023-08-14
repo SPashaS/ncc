@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230810003827">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230814082452">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
 			<div class="header__container">
 				<div class="header__body">
 					<div class="header__menu-mob mob-menu">
+
 						<button type="button" class="mob-menu__burger icon-burger">
 							<span class="icon-burger__text">МЕНЮ</span>
 							<span class="icon-burger__lines"></span>
@@ -25,7 +26,7 @@
 						<div class="mob-menu__body">
 							<nav class="mob-menu__nav">
 								<div class="mob-menu__nav-box mob-menu__nav-box_children nav-box">
-									<span class="nav-box__title">Детям и подросткам</span>
+									<div class="nav-box__title">Детям и подросткам</div>
 									<ul class="nav-box__list">
 										<li>
 											<a href="#" class="nav-box__link">Английский для детей 4-5 лет</a>
@@ -46,7 +47,7 @@
 								</div>
 
 								<div class="mob-menu__nav-box mob-menu__nav-box_adults nav-box">
-									<span class="nav-box__title">Взрослым</span>
+									<div class="nav-box__title">Взрослым</div>
 									<ul class="nav-box__list">
 										<li>
 											<a href="#" class="nav-box__link">Starter</a>
@@ -74,7 +75,7 @@
 
 
 								<div class="mob-menu__nav-box mob-menu__nav-box_about nav-box">
-									<span class="nav-box__title">О нас</span>
+									<div class="nav-box__title">О нас</div>
 									<ul class="nav-box__list">
 										<li>
 											<a href="#" class="nav-box__link">Отзывы</a>
@@ -135,13 +136,13 @@
 										<ul class="contacts-list__phones">
 											<li class="contacts-list__item _icon-phone">
 												<div class="contacts-list__body">
-													<a href="#" class="contacts-list__link">+375 44 733 51 21</a>
+													<a href="#" class="contacts-list__link" aria-label="А1">+375 44 733 51 21</a>
 													<span class="contacts-list__text">А1</span>
 												</div>
 											</li>
 											<li class="contacts-list__item _icon-phone">
 												<div class="contacts-list__body">
-													<a href="#" class="contacts-list__link">+375 33 917 71 93</a>
+													<a href="#" class="contacts-list__link" aria-label="МТС">+375 33 917 71 93</a>
 													<span class="contacts-list__text">МТС</span>
 												</div>
 											</li>
@@ -151,17 +152,17 @@
 
 									<ul class="mob-menu__social contacts-social">
 										<li class="contacts-social__item">
-											<a href="#" class="contacts-social__link">
+											<a href="#" class="contacts-social__link" aria-label="Instagram">
 												<span class="contacts-social__icon icon-circle icon-circle_white _icon-instagram"></span>
 											</a>
 										</li>
 										<li class="contacts-social__item">
-											<a href="https://t.me/+375447335127" class="contacts-social__link">
+											<a href="https://t.me/+375447335127" class="contacts-social__link" aria-label="Telegram">
 												<span class="contacts-social__icon icon-circle icon-circle_white _icon-telegram"></span>
 											</a>
 										</li>
 										<li class="contacts-social__item">
-											<a href="viber://chat?number=%2B375339177193" class="contacts-social__link">
+											<a href="viber://chat?number=%2B375339177193" class="contacts-social__link" aria-label="Viber">
 												<span class="contacts-social__icon icon-circle icon-circle_white _icon-viber"></span>
 											</a>
 										</li>
@@ -169,10 +170,7 @@
 
 								</div>
 							</nav>
-
-
 						</div>
-
 					</div>
 
 					<div class="header__logo">
@@ -291,8 +289,6 @@
 
 					</div>
 
-
-
 					<ul class="header__contacts-phone contacts-phone">
 						<li class="contacts-phone__item">
 							<a href="tel:+375447335121" class="contacts-phone__link">
@@ -341,7 +337,7 @@
 								<li class="promo__item _icon-check">Пригласим на пробное БЕСПЛАТНОЕ занятие</li>
 							</ul>
 							<div class="promo__footer">
-								<button class="promo__button button">Записаться на тестирование</button>
+								<button class="promo__button button" data-popup="#free-test">Записаться на тестирование</button>
 								<div class="promo__info">
 									<p class="promo__info-text">
 										И получить бесплатное пробное занятие
@@ -350,9 +346,7 @@
 							</div>
 						</div>
 						<div class="promo__images">
-							<div class="promo__image">
-								<picture><source srcset="img/promo/hat.webp" type="image/webp"><img src="img/promo/hat.png" alt="ОБУЧЕНИЕ АНГЛИЙСКОМУ ЯЗЫКУ - вместе с NEW CHALLENGE CLUB"></picture>
-							</div>
+							<div class="promo__images-hat"></div>
 						</div>
 					</div>
 				</div>
@@ -375,23 +369,24 @@
 						<div class="about__numbers">
 							<div class="numbers">
 								<div class="numbers__item">
-									<div class="numbers__item-title">120 000</div>
+									<div class="numbers__item-title">>2000</div>
 									<p class="numbers__item-text">
 										учеников прошли обучение у нас
 									</p>
 								</div>
 								<div class="numbers__item">
-									<div class="numbers__item-title">12 лет</div>
-									<p class="numbers__item-text">
-										на рынке
-									</p>
-								</div>
-								<div class="numbers__item">
-									<div class="numbers__item-title">94%</div>
+									<div class="numbers__item-title">95%</div>
 									<p class="numbers__item-text">
 										рекомендуют нас
 									</p>
 								</div>
+								<div class="numbers__item">
+									<div class="numbers__item-title">10 лет</div>
+									<p class="numbers__item-text">
+										на рынке
+									</p>
+								</div>
+
 							</div>
 
 						</div>
@@ -405,7 +400,7 @@
 				<div class="needs__container">
 					<h2 class="needs__title">Потребности, которые мы успешно закрываем:</h2>
 					<div class="needs__body">
-						<div class="need">
+						<div class="needs__item need">
 							<div class="need__box">
 								<span class="need__ico ico ico_need ico_question"></span>
 								<p class="need__desc">
@@ -417,7 +412,7 @@
 								языка.
 							</p>
 						</div>
-						<div class="need">
+						<div class="needs__item need">
 							<div class="need__box">
 								<span class="need__ico ico ico_need ico_travel"></span>
 								<p class="need__desc">
@@ -428,7 +423,7 @@
 								В основе наших программ — <b>современные учебные пособия,</b> с настоящим разговорным языком.
 							</p>
 						</div>
-						<div class="need">
+						<div class="needs__item need">
 							<div class="need__box">
 								<span class="need__ico ico ico_need ico_building"></span>
 								<p class="need__desc">
@@ -440,7 +435,7 @@
 								сказать, что мы знаем, что вам нужно.
 							</p>
 						</div>
-						<div class="need">
+						<div class="needs__item need">
 							<div class="need__box">
 								<span class="need__ico ico ico_need ico_noun-stop "></span>
 								<p class="need__desc">
@@ -452,7 +447,7 @@
 									снятию языкового барьера.</b>
 							</p>
 						</div>
-						<div class="need">
+						<div class="needs__item need">
 							<div class="need__box">
 								<span class="need__ico ico ico_need ico_laptop"></span>
 								<p class="need__desc">
@@ -724,7 +719,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/1.webp" type="image/webp"><img src="img/team/1.jpg" alt="1"></picture>
+													<picture><source srcset="img/team/1.webp" type="image/webp"><img src="img/team/1.png" alt="1"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -761,7 +756,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/2.webp" type="image/webp"><img src="img/team/2.jpg" alt="2"></picture>
+													<picture><source srcset="img/team/2.webp" type="image/webp"><img src="img/team/2.png" alt="2"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -799,7 +794,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/3.webp" type="image/webp"><img src="img/team/3.jpg" alt="3"></picture>
+													<picture><source srcset="img/team/3.webp" type="image/webp"><img src="img/team/3.png" alt="3"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -834,7 +829,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/4.webp" type="image/webp"><img src="img/team/4.jpg" alt="4"></picture>
+													<picture><source srcset="img/team/4.webp" type="image/webp"><img src="img/team/4.png" alt="4"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -873,7 +868,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/5.webp" type="image/webp"><img src="img/team/5.jpg" alt="5"></picture>
+													<picture><source srcset="img/team/5.webp" type="image/webp"><img src="img/team/5.png" alt="5"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -911,7 +906,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/6.webp" type="image/webp"><img src="img/team/6.jpg" alt="6"></picture>
+													<picture><source srcset="img/team/6.webp" type="image/webp"><img src="img/team/6.png" alt="6"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -948,7 +943,7 @@
 										<div class="team-teacher__image-block">
 											<div class="team-teacher__image-circle image-circle">
 												<div class="image-circle__image image-circle__image-ibg">
-													<picture><source srcset="img/team/7.webp" type="image/webp"><img src="img/team/7.jpg" alt="7"></picture>
+													<picture><source srcset="img/team/7.webp" type="image/webp"><img src="img/team/7.png" alt="7"></picture>
 												</div>
 											</div>
 											<div class="team-teacher__image-block-experience">
@@ -958,7 +953,7 @@
 											</div>
 										</div>
 										<div class="team-teacher__header">
-											<h3 class="team-teacher__title">Субоч</h3>
+											<h3 class="team-teacher__title">Субоч Наталья</h3>
 											<div class="team-teacher__header-experience">
 												<span class="tag tag_accent">
 													22 года стажа
@@ -973,7 +968,10 @@
 											</p>
 										</div>
 										<div class="team-teacher__tags">
-
+											<span class="tag">Английский для взрослых</span>
+											<span class="tag">Бизнес английский</span>
+											<span class="tag">Групповые занятия</span>
+											<span class="tag">Индивидуальные занятия</span>
 										</div>
 									</div>
 								</div>
@@ -993,24 +991,36 @@
 				<div class="gallery__container">
 					<h2 class="gallery__title title">Как проходят занятия</h2>
 					<div class="gallery__body">
-						<div class="gallery__item-1 gallery__item-ibg">
-							<picture><source srcset="img/gallery/1.webp" type="image/webp"><img src="img/gallery/1.jpg" alt="1"></picture>
+						<div class="gallery__body-item gallery__body-item_left">
+							<div class="gallery__body-item-left gallery__body-item-left_top">
+								<div class="gallery__item-1 gallery__item-ibg">
+									<picture><source srcset="img/gallery/1.webp" type="image/webp"><img src="img/gallery/1.jpg" alt="1"></picture>
+								</div>
+								<div class="gallery__item-2 gallery__item-ibg">
+									<picture><source srcset="img/gallery/2.webp" type="image/webp"><img src="img/gallery/2.jpg" alt="2"></picture>
+								</div>
+							</div>
+							<div class="gallery__body-item-left gallery__body-item-left_bottom">
+								<div class="gallery__item-3 gallery__item-ibg">
+									<picture><source srcset="img/gallery/4.webp" type="image/webp"><img src="img/gallery/4.jpg" alt="4"></picture>
+								</div>
+								<div class="gallery__item-4 gallery__item-ibg">
+									<picture><source srcset="img/gallery/5.webp" type="image/webp"><img src="img/gallery/5.jpg" alt="5"></picture>
+								</div>
+							</div>
+
+
 						</div>
-						<div class="gallery__item-2 gallery__item-ibg">
-							<picture><source srcset="img/gallery/2.webp" type="image/webp"><img src="img/gallery/2.jpg" alt="2"></picture>
+						<div class="gallery__body-item gallery__body-item_right">
+							<div class="gallery__item-5 gallery__item-ibg">
+								<picture><source srcset="img/gallery/3.webp" type="image/webp"><img src="img/gallery/3.jpg" alt="3"></picture>
+							</div>
+
+							<div class="gallery__item-6 gallery__item-ibg">
+								<picture><source srcset="img/gallery/6.webp" type="image/webp"><img src="img/gallery/6.jpg" alt="6"></picture>
+							</div>
 						</div>
-						<div class="gallery__item-3 gallery__item-ibg">
-							<picture><source srcset="img/gallery/3.webp" type="image/webp"><img src="img/gallery/3.jpg" alt="3"></picture>
-						</div>
-						<div class="gallery__item-4 gallery__item-ibg">
-							<picture><source srcset="img/gallery/4.webp" type="image/webp"><img src="img/gallery/4.jpg" alt="4"></picture>
-						</div>
-						<div class="gallery__item-5 gallery__item-ibg">
-							<picture><source srcset="img/gallery/5.webp" type="image/webp"><img src="img/gallery/5.jpg" alt="5"></picture>
-						</div>
-						<div class="gallery__item-6 gallery__item-ibg">
-							<picture><source srcset="img/gallery/6.webp" type="image/webp"><img src="img/gallery/6.jpg" alt="6"></picture>
-						</div>
+
 					</div>
 				</div>
 			</section>
@@ -1242,18 +1252,18 @@
 						</a>
 						<ul class="contacts-social">
 							<li class="contacts-social__item">
-								<a href="#" class="contacts-social__link">
-									<span class="contacts-social__icon icon-circle icon-circle_white _icon-instagram"></span>
+								<a href="#" class="contacts-social__link" aria-label="Instagram">
+									<span class="contacts-social__icon icon-circle icon-circle_white icon-circle_footer _icon-instagram"></span>
 								</a>
 							</li>
 							<li class="contacts-social__item">
-								<a href="https://t.me/+375447335127" class="contacts-social__link">
-									<span class="contacts-social__icon icon-circle icon-circle_white _icon-telegram"></span>
+								<a href="https://t.me/+375447335127" class="contacts-social__link" aria-label="Telegram">
+									<span class="contacts-social__icon icon-circle icon-circle_white icon-circle_footer _icon-telegram"></span>
 								</a>
 							</li>
 							<li class="contacts-social__item">
-								<a href="viber://chat?number=%2B375339177193" class="contacts-social__link">
-									<span class="contacts-social__icon icon-circle icon-circle_white _icon-viber"></span>
+								<a href="viber://chat?number=%2B375339177193" class="contacts-social__link" aria-label="Viber">
+									<span class="contacts-social__icon icon-circle icon-circle_white icon-circle_footer _icon-viber"></span>
 								</a>
 							</li>
 						</ul>
@@ -1375,19 +1385,25 @@
 			</div>
 		</footer>
 	</div>
-	<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="free-test" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-close" aria-label="Закрыть попап"></button>
+				<div class="popup__body free-test">
+					<div class="free-test__title"><strong>Запишитесь на бесплатное</strong> тестирование</div>
+					<form action="" class="free-test__form">
+						<input class="free-test__input" type="text" placeholder="Имя">
+						<input class="free-test__input" type="text" placeholder="+375 (__) ___-__-__">
+						<button type="submit" class="button">Записаться</button>
+					</form>
+					<div class="free-test__footer _icon-gift">скидка 5% на первый месяц обучения</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
- -->
 
-	<script src="js/app.min.js?_v=20230810003827"></script>
+
+	<script src="js/app.min.js?_v=20230814082452"></script>
 </body>
 
 </html>
