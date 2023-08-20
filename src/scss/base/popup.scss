@@ -20,7 +20,7 @@ body.popup-show::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 30px 10px;
+	padding: 30px 14px;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
@@ -50,12 +50,120 @@ body.popup-show::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: var(--color-white);
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 466px;
 	border-radius: 20px;
+
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.popup__close {
+	font-size: 2.5rem;
+	background-color: transparent;
+	position: absolute;
+	right: 0;
+	top: -35px;
+
+	@media (min-width:$mobile){
+		top: 0;
+		right: -40px;
+	}
+
+	&::before {
+		color: var(--color-white);
+	}
+
+
+}
+
+
+
+.free-test {
+
+	// .free-test__title
+	&__title {
+		font-size: 1.8rem;
+		text-align: center;
+		margin-bottom: 20px;
+
+		@media (min-width:$mobile){
+			font-size: 2.4rem;
+		}
+	}
+
+	// .free-test__form
+	&__form {
+	
+	}
+
+
+	// .free-test__footer
+	&__footer {
+		color: var(--color-main);
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 1.4rem;
+
+		@media (min-width:$mobile){
+			font-size: 1.6rem;
+		}
+
+		&::before {
+			font-size: 26px;
+
+			@media (min-width:$mobile){
+				font-size: 3.6rem; 
+			}
+		}
+	}
+}
+
+
+
+.free-test {
+
+	// .free-test__form
+
+	&__form {}
+}
+.form {
+	display: grid;
+	row-gap: 15px;
+
+	margin-bottom: 20px;
+
+	@media (min-width:$mobile){
+		margin-bottom: 30px; 
+	}
+	// .form__input
+
+	&__input input {
+		width: 100%;
+		border-radius: 8px;
+		border: 1px solid var(--color-gray);
+		background: var(--color-white);
+		padding: 14px 15px;
+
+		&::placeholder {
+			color: var(--color-gray);
+		}
+
+		@media (min-width:$mobile){
+			font-size: 1.6rem;
+		}
+	}
+
+	// .form__button
+	&__button {
+		input {
+			@media (min-width:$mobile){
+				padding: 16px;
+			}
+		}
 	}
 }

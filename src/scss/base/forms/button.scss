@@ -1,14 +1,100 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
+.form__button input,
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
+	justify-content: center;
+	align-items: center;
+	padding: 14px;
+	font-weight: 600;
+	background-color: var(--color-accent);
+	border-radius: 8px;
+	width: 100%;
+	min-height: 47px;
+
+	&:active {
+		background-color: #EDD32F;
 	}
+
+	@media (min-width:$mobile){
+		padding: 20px 32px;
+	}
+
+	@media (min-width:$pcSmall){
+
+		transition: all 0.3s ease 0s;
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--color-accent-hover);
+			}
+		} 
+	}
+
 	&._fw {
 		width: 100%;
 	}
+
 }
+
+
+.to-top {
+	
+	background-color: var(--color-main);
+	color: var(--color-white);
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+	
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	z-index: 5;
+	bottom: 30px;
+	right: 30px;
+
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+	&_active {
+		opacity: 70%;
+		visibility: visible;
+		pointer-events: visible;
+	}
+
+
+	@media (min-width:$pcSmall){
+		bottom: 115px;
+		// right: 152px;
+	}
+
+	&::before {
+		transform: rotate(180deg);
+		font-size: 24px;
+		color: var(--color-white);
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+// #toTop {
+// 	/* display: none; */
+// 	display: block;
+// 	position: fixed;
+// 	bottom: 115px;
+// 	right: 30px;
+// 	overflow: hidden;
+// 	border: none;
+// 	text-indent: 100%;
+// 	z-index: 9999;
+// }
