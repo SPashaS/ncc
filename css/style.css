@@ -1742,6 +1742,11 @@ h2 {
     padding-top: 0;
   }
 }
+@media (min-width: 1279.98px) {
+  .page_promo {
+    padding-top: 0;
+  }
+}
 .promo {
   background-color: var(--color-main);
   padding: 100px 0 20px;
